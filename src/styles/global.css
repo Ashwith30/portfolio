@@ -1,0 +1,40 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 60%, #000000 100%);
+color:#e5e5e5;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+min-height:100vh;
+overflow-x:hidden;
+}
+
+section{
+padding:80px 10%;
+}
+body{
+font-family: 'Inter', sans-serif;
+}
+html{
+scroll-behavior:smooth;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+ul{
+list-style:none;
+}
+a:hover .dock-tooltip{
+opacity:1;
+transform:translateY(-6px);
+}
+a:hover svg{
+filter:drop-shadow(0px 0px 8px rgba(255,255,255,0.6));
+transition:0.3s;
+}

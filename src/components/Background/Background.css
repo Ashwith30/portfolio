@@ -1,0 +1,118 @@
+/* MAIN BACKGROUND */
+
+.background{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+background:#000;
+overflow:hidden;
+}
+
+
+/* SPOTLIGHT GLOW */
+
+.spotlight{
+position:absolute;
+top:50%;
+left:50%;
+width:1000px;
+height:1000px;
+
+background:radial-gradient(
+circle,
+rgba(120,80,255,0.12) 0%,
+rgba(255,120,255,0.08) 25%,
+transparent 60%
+);
+
+transform:translate(-50%,-50%);
+filter:blur(120px);
+}
+
+
+/* STAR LAYERS */
+
+.stars,
+.stars2,
+.stars3{
+position:absolute;
+width:300%;
+height:300%;
+top:-100%;
+left:-100%;
+}
+
+
+/* SMALL STARS — VERY DENSE */
+
+.stars{
+background-image:
+radial-gradient(1px 1px at 5% 10%, #ffffff, transparent),
+radial-gradient(1px 1px at 15% 30%, #e6e6ff, transparent),
+radial-gradient(1px 1px at 25% 70%, #ffffff, transparent),
+radial-gradient(1px 1px at 35% 40%, #dcdcff, transparent),
+radial-gradient(1px 1px at 45% 80%, #ffffff, transparent),
+radial-gradient(1px 1px at 55% 20%, #e6e6ff, transparent),
+radial-gradient(1px 1px at 65% 60%, #ffffff, transparent),
+radial-gradient(1px 1px at 75% 35%, #dcdcff, transparent),
+radial-gradient(1px 1px at 85% 75%, #ffffff, transparent),
+radial-gradient(1px 1px at 95% 15%, #e6e6ff, transparent),
+
+radial-gradient(1px 1px at 10% 85%, #ffffff, transparent),
+radial-gradient(1px 1px at 30% 55%, #e6e6ff, transparent),
+radial-gradient(1px 1px at 50% 90%, #ffffff, transparent),
+radial-gradient(1px 1px at 70% 10%, #dcdcff, transparent),
+radial-gradient(1px 1px at 90% 50%, #ffffff, transparent);
+
+animation:spaceDrift 60s linear infinite;
+}
+
+
+/* MEDIUM STARS */
+
+.stars2{
+background-image:
+radial-gradient(2px 2px at 20% 20%, #ffffff, transparent),
+radial-gradient(2px 2px at 40% 60%, #dcdcff, transparent),
+radial-gradient(2px 2px at 60% 30%, #ffffff, transparent),
+radial-gradient(2px 2px at 80% 80%, #e6e6ff, transparent),
+radial-gradient(2px 2px at 95% 45%, #ffffff, transparent);
+
+animation:spaceDrift 100s linear infinite;
+opacity:0.7;
+}
+
+
+/* LARGE STARS */
+
+.stars3{
+background-image:
+radial-gradient(3px 3px at 25% 50%, #ffffff, transparent),
+radial-gradient(3px 3px at 50% 25%, #dcdcff, transparent),
+radial-gradient(3px 3px at 75% 70%, #ffffff, transparent);
+
+animation:spaceDrift 140s linear infinite;
+opacity:0.5;
+}
+
+
+/* REAL SPACE DRIFT ANIMATION */
+
+@keyframes spaceDrift{
+
+0%{
+transform:translate3d(0,0,0) rotate(0deg);
+}
+
+50%{
+transform:translate3d(-200px,-400px,0) rotate(1deg);
+}
+
+100%{
+transform:translate3d(-400px,-800px,0) rotate(0deg);
+}
+
+}

@@ -1,0 +1,206 @@
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero-name{
+font-size:85px;
+font-weight:900;
+letter-spacing:8px;
+margin-bottom:20px;
+
+/* metallic gradient */
+background: linear-gradient(
+90deg,
+#f5f5f5 0%,
+#c9c9c9 20%,
+#7a7a7a 40%,
+#bfbfbf 60%,
+#f5f5f5 80%
+);
+
+background-size:200% auto;
+
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+
+/* subtle metallic shine */
+animation:metalShine 6s linear infinite;
+
+/* glow */
+text-shadow:
+0 0 8px rgba(255,255,255,0.1),
+0 0 20px rgba(255,255,255,0.08);
+}
+@keyframes metalShine{
+0%{
+background-position:0% center;
+}
+100%{
+background-position:200% center;
+}
+}
+
+
+
+.hero-role{
+font-size:28px;
+font-weight:400;
+color:#cfcfcf;
+letter-spacing:1px;
+margin-top:10px;
+margin-bottom:35px;
+text-align:center;
+}
+
+/* animated role word */
+
+.role-text{
+font-weight:600;
+
+/* gradient tint */
+background: linear-gradient(
+90deg,
+#5227FF,
+#FF9FFC,
+#B19EEF
+);
+
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+
+/* subtle glow */
+text-shadow:
+0 0 8px rgba(120,80,255,0.25),
+0 0 18px rgba(255,120,255,0.18);
+}
+
+.hero-btn{
+padding:12px 28px;
+background:transparent;
+border:1px solid #555;
+color:white;
+border-radius:25px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+background:white;
+color:black;
+}
+.hero-divider{
+width:80px;
+height:2px;
+margin:18px auto;
+
+background: linear-gradient(
+90deg,
+transparent,
+#cfcfcf,
+#8a8a8a,
+#dcdcdc,
+#8a8a8a,
+#cfcfcf,
+transparent
+);
+
+opacity:0.8;
+
+animation:dividerGlow 4s ease-in-out infinite;
+}
+@keyframes dividerGlow{
+0%{
+opacity:0.4;
+transform:scaleX(0.85);
+filter:blur(0.3px);
+}
+50%{
+opacity:1;
+transform:scaleX(1);
+filter:blur(1px);
+}
+100%{
+opacity:0.4;
+transform:scaleX(0.85);
+filter:blur(0.3px);
+}
+}
+
+.hero-heading{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+margin-bottom:25px;
+
+opacity:0;
+transform:translateY(40px);
+animation:fadeHero 1.4s ease forwards;
+}
+
+/* Hello I'm text */
+
+.hero-intro{
+font-size:28px;
+letter-spacing:3px;
+color:#e6e6e6;
+margin-bottom:12px;
+font-weight:400;
+}
+
+/* Dusky metallic name */
+
+.hero-name-dusky{
+font-size:95px;
+font-weight:900;
+letter-spacing:5px;
+line-height:1.05;
+
+background: linear-gradient(
+90deg,
+#ffffff 0%,
+#d6d6d6 20%,
+#8a8a8a 40%,
+#2e2e2e 60%,
+#bfbfbf 80%,
+#ffffff 100%
+);
+
+background-size:300% auto;
+
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+
+animation:gradientMove 10s linear infinite;
+
+/* subtle cinematic glow */
+text-shadow:
+0 0 10px rgba(255,255,255,0.12),
+0 0 25px rgba(180,180,180,0.08),
+0 0 40px rgba(120,120,120,0.06);
+}
+
+/* fade entry */
+
+@keyframes fadeHero{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* slow metallic sweep */
+
+@keyframes gradientMove{
+0%{ background-position:0% center; }
+100%{ background-position:200% center; }
+}

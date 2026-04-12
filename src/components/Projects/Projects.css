@@ -1,0 +1,198 @@
+.projects-section{
+height:100vh;
+background:#050505;
+color:white;
+padding:50px 6%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.projects-title{
+text-align:center;
+font-size:48px;
+margin-bottom:40px;
+}
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.project-card{
+position:relative;
+height:170px;
+border-radius:18px;
+overflow:hidden;
+cursor:pointer;
+}
+
+.project-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.7);
+transition:0.4s;
+}
+
+.project-card:hover img{
+transform:scale(1.08);
+filter:brightness(0.4);
+}
+
+.project-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+opacity:0;
+transition:0.4s;
+}
+
+.project-card:hover .project-overlay{
+opacity:1;
+}
+
+.project-overlay span{
+font-size:32px;
+background:rgba(0,0,0,0.6);
+padding:10px 16px;
+border-radius:50%;
+}
+
+.project-name{
+position:absolute;
+bottom:10px;
+left:15px;
+font-size:14px;
+}
+
+/* modal */
+
+/* ===== PREMIUM PROJECT POPUP ===== */
+
+.project-modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(12px);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:1000;
+
+animation:fadeInModal 0.35s ease;
+}
+
+@keyframes fadeInModal{
+from{ opacity:0; }
+to{ opacity:1; }
+}
+
+.project-popup{
+width:750px;
+max-width:90%;
+background:linear-gradient(
+145deg,
+#0f0f0f,
+#050505
+);
+border-radius:26px;
+overflow:hidden;
+position:relative;
+
+box-shadow:
+0 40px 120px rgba(0,0,0,0.9),
+0 0 0 1px rgba(255,255,255,0.05);
+
+transform:scale(0.9);
+animation:popupScale 0.35s ease forwards;
+}
+
+@keyframes popupScale{
+to{
+transform:scale(1);
+}
+}
+
+/* project image */
+
+.popup-image{
+width:100%;
+height:260px;
+object-fit:cover;
+filter:brightness(0.75);
+}
+
+/* text content */
+
+.popup-content{
+padding:28px 32px 35px 32px;
+text-align:center;
+}
+
+.popup-content h3{
+font-size:28px;
+margin-bottom:15px;
+letter-spacing:1px;
+}
+
+.popup-content p{
+font-size:15px;
+line-height:1.7;
+color:#cfcfcf;
+}
+
+/* github button */
+
+.github-btn{
+display:inline-block;
+margin-top:22px;
+padding:10px 26px;
+
+background:linear-gradient(
+90deg,
+#7a5cff,
+#b69cff
+);
+
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-size:14px;
+letter-spacing:1px;
+
+transition:0.3s;
+}
+
+.github-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(122,92,255,0.4);
+}
+
+/* close button */
+
+.popup-close{
+position:absolute;
+top:12px;
+right:16px;
+font-size:22px;
+cursor:pointer;
+color:#aaa;
+transition:0.3s;
+}
+
+.popup-close:hover{
+color:white;
+transform:rotate(90deg);
+}
