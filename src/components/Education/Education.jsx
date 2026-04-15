@@ -5,20 +5,19 @@ function Education() {
   const education = [
     {
       title: "B.Tech in Computer Science",
-      place: "Your College Name",
-      year: "2022 - 2026",
+      place: "HYDERABAD INSTITUTE OF TECHNOLOGY AND MANAGEMENT",
+      year: "2023 - 2027",
       desc: "Focused on AI, Machine Learning, Web Development and System Design."
     },
     {
       title: "Intermediate (12th)",
-      place: "Your College / Junior College",
-      year: "2020 - 2022",
+      place: "Sri chaitanya",
+      year: "2021 - 2023",
       desc: "Mathematics, Physics, Chemistry with strong analytical foundation."
     },
     {
       title: "Schooling",
-      place: "Your School Name",
-      year: "2019 - 2020",
+      place: "Sri Chaitanya Tecchno School",
       desc: "Built strong fundamentals and developed interest in technology."
     }
   ];

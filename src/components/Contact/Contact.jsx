@@ -13,9 +13,9 @@ function Contact() {
           <p>Let’s connect and build something amazing 🚀</p>
 
           <div className="contact-links">
-            <a href="mailto:yourmail@gmail.com">Email</a>
-            <a href="https://github.com/" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="mailto:ashwith0530@gmail.com">Email</a>
+            <a href="https://github.com/Ashwith30" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/ashwith-reddy-06a1b6290/" target="_blank">LinkedIn</a>
           </div>
         </div>
 

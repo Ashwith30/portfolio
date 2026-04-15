@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Background from "./components/Background/Background";
@@ -14,6 +15,8 @@ function App() {
 
   const [section, setSection] = useState("home");
 
+  const aboutRef = useRef(null);   // ✅ added
+
   return (
     <>
       <Background />
@@ -22,16 +25,14 @@ function App() {
 
       {section === "home" && (
         <>
-          <Hero />
-          <About />
+          <Hero setSection={setSection} aboutRef={aboutRef} />
+          <About aboutRef={aboutRef} />
         </>
       )}
 
       {section === "skills" && <Skills />}
       {section === "education" && <Education />}
-
       {section === "projects" && <Projects />}
-
       {section === "contact" && <Contact />}
       {section === "resume" && <Resume />}
 

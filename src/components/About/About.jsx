@@ -1,8 +1,8 @@
 import "./About.css";
 
-function About() {
+function About({ aboutRef }) {
   return (
-    <section className="about-section">
+    <section ref={aboutRef} className="about-section">
 
       <div className="about-container">
 

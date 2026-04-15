@@ -1,9 +1,11 @@
 import "./AnimatedButton.css";
 
-function AnimatedButton() {
+function AnimatedButton({ onClick }) {   // 👈 accept prop
+
   return (
     <div className="btn-wrapper">
-      <button className="btn">
+
+      <button className="btn" onClick={onClick}>   {/* 👈 attach click */}
 
         <svg
           className="btn-svg"

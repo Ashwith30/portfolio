@@ -8,7 +8,7 @@ function Resume() {
 
       <div className="resume-viewer">
         <iframe
-          src="/ashwith_resume.pdf"
+          src="/resume.pdf"
           title="Resume"
           width="100%"
           height="100%"

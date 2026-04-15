@@ -4,7 +4,7 @@ import "./Hero.css";
 import AnimatedButton from "../AnimatedButton/AnimatedButton";
 
 
-function Hero() {
+function Hero({ setSection, aboutRef })  {
 
   const roleRef = useRef(null);
 
@@ -45,7 +45,17 @@ function Hero() {
   I am a <span className="role-text" ref={roleRef}></span>
 </p>
 
-      <AnimatedButton />
+      <AnimatedButton
+  onClick={() => {
+    setSection("home");
+
+    setTimeout(() => {
+      aboutRef.current?.scrollIntoView({
+        behavior: "smooth"
+      });
+    }, 100);
+  }}
+/>
 
     </section>
   );
